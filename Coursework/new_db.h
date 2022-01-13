@@ -47,6 +47,8 @@ private:
     table_Type_Model *query;
     size_t change_row;
 
+    size_t ff;
+
     QString name, query_DB, Col_name, Col_type;
 };
 
