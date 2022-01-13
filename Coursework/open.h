@@ -23,13 +23,12 @@ private slots:
     void on_buttonBox_accepted();
 
 signals:
-    void signal_Ok(QString);
+    void signal_Ok(QString, QString);
 
 private:
 
     Ui::Open *ui;
-    QString File_Path;
-
+    QString File_Path, File_Type;
 
 };
 

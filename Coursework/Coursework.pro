@@ -12,19 +12,29 @@ SOURCES += \
     main.cpp \
     main_w.cpp \
     new_db.cpp \
-    open.cpp
+    open.cpp \
+    start_w.cpp \
+    table_type_model.cpp
 
 HEADERS += \
     main_w.h \
     new_db.h \
-    open.h
+    open.h \
+    start_w.h \
+    table_type_model.h
 
 FORMS += \
     main_w.ui \
     new_db.ui \
-    open.ui
+    open.ui \
+    start_w.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+DISTFILES +=
+
+RESOURCES += \
+    ../Image/Logo.qrc

@@ -15,14 +15,14 @@ Open::~Open()
 
 void Open::on_pushButton_clicked()
 {
-    File_Path = QFileDialog::getOpenFileName(this, "Open the database", "C://", "All files (*.*);; Acces db (*.accdb);; Database (*.db);");
-
+    File_Path = QFileDialog::getOpenFileName(this, "Open the database", "", "All files (*.*);; Acces db (*.accdb);; Database (*.db);");
+    File_Type = File_Path.mid(File_Path.indexOf("."));
     ui->lineEdit->setText(File_Path);
 }
 
 
 void Open::on_buttonBox_accepted()
 {
-    if(File_Path != "") emit signal_Ok(File_Path);
+    if(File_Path != "") emit signal_Ok(File_Path, File_Type);
 }
 

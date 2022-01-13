@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_New_DB_t {
-    const uint offsetsAndSize[22];
-    char stringdata0[169];
+    const uint offsetsAndSize[32];
+    char stringdata0[255];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(offsetof(qt_meta_stringdata_New_DB_t, stringdata0) + ofs), len 
@@ -39,7 +39,12 @@ QT_MOC_LITERAL(61, 4), // "arg1"
 QT_MOC_LITERAL(66, 23), // "on_pushButton_3_clicked"
 QT_MOC_LITERAL(90, 25), // "on_lineEdit_2_textChanged"
 QT_MOC_LITERAL(116, 21), // "on_pushButton_clicked"
-QT_MOC_LITERAL(138, 30) // "on_comboBox_currentTextChanged"
+QT_MOC_LITERAL(138, 30), // "on_comboBox_currentTextChanged"
+QT_MOC_LITERAL(169, 19), // "on_listView_clicked"
+QT_MOC_LITERAL(189, 11), // "QModelIndex"
+QT_MOC_LITERAL(201, 5), // "index"
+QT_MOC_LITERAL(207, 23), // "on_pushButton_2_clicked"
+QT_MOC_LITERAL(231, 23) // "on_pushButton_4_clicked"
 
     },
     "New_DB\0signal_NewDB_Ok\0\0Name\0queryDB\0"
@@ -47,7 +52,9 @@ QT_MOC_LITERAL(138, 30) // "on_comboBox_currentTextChanged"
     "on_pushButton_3_clicked\0"
     "on_lineEdit_2_textChanged\0"
     "on_pushButton_clicked\0"
-    "on_comboBox_currentTextChanged"
+    "on_comboBox_currentTextChanged\0"
+    "on_listView_clicked\0QModelIndex\0index\0"
+    "on_pushButton_2_clicked\0on_pushButton_4_clicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -57,7 +64,7 @@ static const uint qt_meta_data_New_DB[] = {
       10,       // revision
        0,       // classname
        0,    0, // classinfo
-       6,   14, // methods
+       9,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -65,14 +72,17 @@ static const uint qt_meta_data_New_DB[] = {
        1,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    2,   50,    2, 0x06,    1 /* Public */,
+       1,    2,   68,    2, 0x06,    1 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       5,    1,   55,    2, 0x08,    4 /* Private */,
-       7,    0,   58,    2, 0x08,    6 /* Private */,
-       8,    1,   59,    2, 0x08,    7 /* Private */,
-       9,    0,   62,    2, 0x08,    9 /* Private */,
-      10,    1,   63,    2, 0x08,   10 /* Private */,
+       5,    1,   73,    2, 0x08,    4 /* Private */,
+       7,    0,   76,    2, 0x08,    6 /* Private */,
+       8,    1,   77,    2, 0x08,    7 /* Private */,
+       9,    0,   80,    2, 0x08,    9 /* Private */,
+      10,    1,   81,    2, 0x08,   10 /* Private */,
+      11,    1,   84,    2, 0x08,   12 /* Private */,
+      14,    0,   87,    2, 0x08,   14 /* Private */,
+      15,    0,   88,    2, 0x08,   15 /* Private */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::QString, QMetaType::QString,    3,    4,
@@ -83,6 +93,9 @@ static const uint qt_meta_data_New_DB[] = {
     QMetaType::Void, QMetaType::QString,    6,
     QMetaType::Void,
     QMetaType::Void, QMetaType::QString,    6,
+    QMetaType::Void, 0x80000000 | 12,   13,
+    QMetaType::Void,
+    QMetaType::Void,
 
        0        // eod
 };
@@ -99,6 +112,9 @@ void New_DB::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void
         case 3: _t->on_lineEdit_2_textChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
         case 4: _t->on_pushButton_clicked(); break;
         case 5: _t->on_comboBox_currentTextChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 6: _t->on_listView_clicked((*reinterpret_cast< const QModelIndex(*)>(_a[1]))); break;
+        case 7: _t->on_pushButton_2_clicked(); break;
+        case 8: _t->on_pushButton_4_clicked(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -121,7 +137,7 @@ const QMetaObject New_DB::staticMetaObject = { {
     nullptr,
 qt_incomplete_metaTypeArray<qt_meta_stringdata_New_DB_t
 , QtPrivate::TypeAndForceComplete<New_DB, std::true_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<QString, std::false_type>, QtPrivate::TypeAndForceComplete<QString, std::false_type>
-, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<const QString &, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<const QString &, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<const QString &, std::false_type>
+, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<const QString &, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<const QString &, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<const QString &, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<const QModelIndex &, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>
 
 
 >,
@@ -148,13 +164,13 @@ int New_DB::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 6)
+        if (_id < 9)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 6;
+        _id -= 9;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 6)
+        if (_id < 9)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 6;
+        _id -= 9;
     }
     return _id;
 }

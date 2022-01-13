@@ -18,7 +18,7 @@
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
-#include <QtWidgets/QListWidget>
+#include <QtWidgets/QListView>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QWidget>
 
@@ -46,7 +46,7 @@ public:
     QLineEdit *lineEdit_2;
     QLabel *label_4;
     QComboBox *comboBox;
-    QListWidget *listWidget;
+    QListView *listView;
 
     void setupUi(QDialog *New_DB)
     {
@@ -55,10 +55,10 @@ public:
         New_DB->resize(400, 203);
         lineEdit = new QLineEdit(New_DB);
         lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
-        lineEdit->setGeometry(QRect(20, 40, 191, 21));
+        lineEdit->setGeometry(QRect(10, 40, 221, 21));
         label = new QLabel(New_DB);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(20, 20, 111, 16));
+        label->setGeometry(QRect(10, 20, 111, 16));
         label_2 = new QLabel(New_DB);
         label_2->setObjectName(QString::fromUtf8("label_2"));
         label_2->setGeometry(QRect(240, 20, 101, 16));
@@ -129,13 +129,15 @@ public:
         comboBox->addItem(QString());
         comboBox->addItem(QString());
         comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
         comboBox->setObjectName(QString::fromUtf8("comboBox"));
 
         formLayout->setWidget(1, QFormLayout::FieldRole, comboBox);
 
-        listWidget = new QListWidget(New_DB);
-        listWidget->setObjectName(QString::fromUtf8("listWidget"));
-        listWidget->setGeometry(QRect(240, 40, 141, 101));
+        listView = new QListView(New_DB);
+        listView->setObjectName(QString::fromUtf8("listView"));
+        listView->setGeometry(QRect(240, 40, 151, 101));
 
         retranslateUi(New_DB);
 
@@ -154,8 +156,10 @@ public:
         label_3->setText(QCoreApplication::translate("New_DB", "Column name:", nullptr));
         label_4->setText(QCoreApplication::translate("New_DB", "Column type:", nullptr));
         comboBox->setItemText(0, QCoreApplication::translate("New_DB", "INT", nullptr));
-        comboBox->setItemText(1, QCoreApplication::translate("New_DB", "TEXT", nullptr));
-        comboBox->setItemText(2, QCoreApplication::translate("New_DB", "COUNT", nullptr));
+        comboBox->setItemText(1, QCoreApplication::translate("New_DB", "DATE", nullptr));
+        comboBox->setItemText(2, QCoreApplication::translate("New_DB", "TEXT", nullptr));
+        comboBox->setItemText(3, QCoreApplication::translate("New_DB", "COUNT", nullptr));
+        comboBox->setItemText(4, QCoreApplication::translate("New_DB", "IMAGE", nullptr));
 
     } // retranslateUi
 

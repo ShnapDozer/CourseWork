@@ -55,14 +55,14 @@ static const uint qt_meta_data_Open[] = {
        1,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    1,   32,    2, 0x06,    1 /* Public */,
+       1,    2,   32,    2, 0x06,    1 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       3,    0,   35,    2, 0x08,    3 /* Private */,
-       4,    0,   36,    2, 0x08,    4 /* Private */,
+       3,    0,   37,    2, 0x08,    4 /* Private */,
+       4,    0,   38,    2, 0x08,    5 /* Private */,
 
  // signals: parameters
-    QMetaType::Void, QMetaType::QString,    2,
+    QMetaType::Void, QMetaType::QString, QMetaType::QString,    2,    2,
 
  // slots: parameters
     QMetaType::Void,
@@ -77,7 +77,7 @@ void Open::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void *
         auto *_t = static_cast<Open *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->signal_Ok((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 0: _t->signal_Ok((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< QString(*)>(_a[2]))); break;
         case 1: _t->on_pushButton_clicked(); break;
         case 2: _t->on_buttonBox_accepted(); break;
         default: ;
@@ -85,7 +85,7 @@ void Open::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void *
     } else if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
         {
-            using _t = void (Open::*)(QString );
+            using _t = void (Open::*)(QString , QString );
             if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&Open::signal_Ok)) {
                 *result = 0;
                 return;
@@ -101,7 +101,7 @@ const QMetaObject Open::staticMetaObject = { {
     qt_static_metacall,
     nullptr,
 qt_incomplete_metaTypeArray<qt_meta_stringdata_Open_t
-, QtPrivate::TypeAndForceComplete<Open, std::true_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<QString, std::false_type>
+, QtPrivate::TypeAndForceComplete<Open, std::true_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<QString, std::false_type>, QtPrivate::TypeAndForceComplete<QString, std::false_type>
 , QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>
 
 
@@ -141,9 +141,9 @@ int Open::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 
 // SIGNAL 0
-void Open::signal_Ok(QString _t1)
+void Open::signal_Ok(QString _t1, QString _t2)
 {
-    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t2))) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);
 }
 QT_WARNING_POP

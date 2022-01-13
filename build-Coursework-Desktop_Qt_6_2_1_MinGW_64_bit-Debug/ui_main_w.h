@@ -15,6 +15,7 @@
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLineEdit>
+#include <QtWidgets/QListView>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
@@ -35,10 +36,11 @@ public:
     QTableView *tableView;
     QLineEdit *lineEdit;
     QPushButton *pushButton_3;
-    QWidget *widget;
+    QWidget *layoutWidget;
     QHBoxLayout *horizontalLayout;
     QPushButton *pushButton_2;
     QPushButton *pushButton;
+    QListView *listView;
     QMenuBar *menubar;
     QMenu *menuFile;
     QStatusBar *statusbar;
@@ -47,7 +49,7 @@ public:
     {
         if (Main_W->objectName().isEmpty())
             Main_W->setObjectName(QString::fromUtf8("Main_W"));
-        Main_W->resize(693, 536);
+        Main_W->resize(693, 574);
         actionNew = new QAction(Main_W);
         actionNew->setObjectName(QString::fromUtf8("actionNew"));
         actionOpen = new QAction(Main_W);
@@ -61,26 +63,29 @@ public:
         tableView->setGeometry(QRect(20, 10, 641, 371));
         lineEdit = new QLineEdit(centralwidget);
         lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
-        lineEdit->setGeometry(QRect(190, 390, 341, 21));
+        lineEdit->setGeometry(QRect(20, 420, 317, 21));
         pushButton_3 = new QPushButton(centralwidget);
         pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
-        pushButton_3->setGeometry(QRect(580, 390, 80, 21));
-        widget = new QWidget(centralwidget);
-        widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(20, 390, 168, 23));
-        horizontalLayout = new QHBoxLayout(widget);
+        pushButton_3->setGeometry(QRect(345, 420, 316, 21));
+        layoutWidget = new QWidget(centralwidget);
+        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
+        layoutWidget->setGeometry(QRect(20, 390, 641, 23));
+        horizontalLayout = new QHBoxLayout(layoutWidget);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        pushButton_2 = new QPushButton(widget);
+        pushButton_2 = new QPushButton(layoutWidget);
         pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
 
         horizontalLayout->addWidget(pushButton_2);
 
-        pushButton = new QPushButton(widget);
+        pushButton = new QPushButton(layoutWidget);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
 
         horizontalLayout->addWidget(pushButton);
 
+        listView = new QListView(centralwidget);
+        listView->setObjectName(QString::fromUtf8("listView"));
+        listView->setGeometry(QRect(20, 440, 317, 91));
         Main_W->setCentralWidget(centralwidget);
         menubar = new QMenuBar(Main_W);
         menubar->setObjectName(QString::fromUtf8("menubar"));
